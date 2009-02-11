@@ -48,8 +48,10 @@ EOF
     ) && puts("Added RoleRequirementTestHelper include to #{app_filename}")
   end
 
+  #Changed the app_filename to application_controller for Rails 2.3
   def add_dependencies_to_application_rb
     app_filename = "#{RAILS_ROOT}/app/controllers/application.rb"
+    app_filename = "#{RAILS_ROOT}/app/controllers/application_controller.rb" if RAILS_GEM_VERSION == '2.3.0'
     
     auth_system_content = <<EOF
   # AuthenticatedSystem must be included for RoleRequirement, and is provided by installing acts_as_authenticates and running 'script/generate authenticated account user'.
