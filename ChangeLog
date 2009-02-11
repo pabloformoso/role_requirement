@@ -1,3 +1,5 @@
+application_controller.rb for Rails 2.3 support added.
+
 Version 1.5 - June 12, 2008
   * bugfix - newer versions of restful_authentication return nil if no user, 
     rather than :false (hurray!).  Updated generator to work accordingly
